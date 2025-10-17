@@ -13,7 +13,7 @@ public class Application {
             int result = calculator.add(text);
 
             //계산된 값을 출력.
-            System.out.println("결과: " + result);
+            System.out.println("결과 : " + result);
         }catch (IllegalArgumentException e){
             //StringCalculator에서 던지는 예외 처리를 하는 곳.
             System.out.println("오류 발생: " + e.getMessage());
