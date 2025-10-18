@@ -52,7 +52,6 @@ public class StringCalculator {
         //Pattern.quote문을 사용하여 커스텀 구분자를 안전하게 인용한다(정규표현식은 오류를 발생시킬 수 있기 때문.)
         delimiter = Pattern.quote(delimiter) + "|[,:]";
     }
-
     return numberString.split(delimiter);
     }
 }
