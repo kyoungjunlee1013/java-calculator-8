@@ -44,13 +44,13 @@ public class StringCalculator {
         int firstNewLineIndex = text.indexOf("\n");
 
         // '//' 다음(인덱스 2)부터 '\n' 전까지의 문자를 커스텀 구분자로 추출
-        delimiter = text.substring(2, firstNewLineIndex);
+        String customDelimiter = text.substring(2, firstNewLineIndex);
 
         // '\n' 다음 위치부터 실제 계산할 숫자 문자열로 지정
         numberString = text.substring(firstNewLineIndex+1);
 
         //Pattern.quote문을 사용하여 커스텀 구분자를 안전하게 인용한다(정규표현식은 오류를 발생시킬 수 있기 때문.)
-        delimiter = Pattern.quote(delimiter) + "|[,:]";
+        delimiter = Pattern.quote(customDelimiter) + "|[,:]";
     }
     return numberString.split(delimiter);
     }
