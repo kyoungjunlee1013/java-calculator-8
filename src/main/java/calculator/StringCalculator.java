@@ -30,8 +30,13 @@ public class StringCalculator {
             return 0;
         }
 
+        String processedText = text.replace("\\n", "\n");
+        if(processedText.trim().isEmpty()){
+            return 0;
+        }
+
         // 2. 문자열을 숫자 문자열 배열로 분리
-        String[] stringNumbers = split(text);
+        String[] stringNumbers = split(processedText);
 
         // 3. 숫자 문자열 배열을 정수 배열로 변환 (음수 검증 포함)
         int[] numbers = toInts(stringNumbers);

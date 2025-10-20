@@ -4,6 +4,10 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class Application {
     public static void main(String[] args) {
+        new Application().run();
+    }
+
+    public void run() {
         System.out.println("덧셈할 문자열을 입력해주세요.");
         String text = Console.readLine();
 
@@ -13,9 +17,10 @@ public class Application {
 
             //계산된 값을 출력.
             System.out.println("결과 : " + result);
-        }catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             //StringCalculator에서 던지는 예외 처리를 하는 곳.
             System.out.println("오류 발생: " + e.getMessage());
         }
     }
 }
+
